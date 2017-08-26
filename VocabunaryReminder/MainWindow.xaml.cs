@@ -18,6 +18,7 @@ namespace VocabunaryReminder
             ExcelReader excelReader = new ExcelReader();
             excelReader.GenerateEXcelData("側");
 
+
         }
     }
 }
