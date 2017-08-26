@@ -121,10 +121,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Icon\" />
-    <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Led.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Preferences.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

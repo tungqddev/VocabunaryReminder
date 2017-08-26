@@ -21,8 +21,6 @@ namespace VocabunaryReminder
         private void button_Click(object sender, RoutedEventArgs e)
         {
             notifyIcon = new TaskbarIcon();
-
-
             //ExcelReader excelReader = new ExcelReader();
             //excelReader.GenerateEXcelData("側");
             // base.OnLoad(e);

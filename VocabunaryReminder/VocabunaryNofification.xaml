@@ -3,10 +3,26 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:tb="http://www.hardcodet.net/taskbar"
         xmlns:local="clr-namespace:VocabunaryReminder"
         mc:Ignorable="d"
         Height="215" 
         Width="300">
+    <UserControl.Resources>
+        <Storyboard x:Key="RotateIcon">
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="image"
+                                           Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0" />
+                <SplineDoubleKeyFrame KeySpline="0,0.284,0.39,1" KeyTime="00:00:01.4000000" Value="360" />
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="tb:TaskbarIcon.PopupOpened">
+            <BeginStoryboard Storyboard="{StaticResource RotateIcon}" x:Name="RotateIcon_BeginStoryboard" />
+        </EventTrigger>
+    </UserControl.Triggers>
+
     <Grid>
         <Border
             HorizontalAlignment="Stretch"
@@ -39,7 +55,7 @@
             Width="72"
             Height="72"
             Source="/Images/Preferences.png"
-            Stretch="Fill" x:Name="image" RenderTransformOrigin="1.7,1.7">
+            Stretch="Fill" x:Name="image" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleX="1" ScaleY="1" />
@@ -56,11 +72,7 @@
             VerticalAlignment="Top"
             FontSize="16"
             FontWeight="Bold"
-            Foreground="#FF575757" HorizontalAlignment="Right" Width="176">
-            <Run
-                Text="This is a fancy Popup..."
-                Language="de-ch" />
-        </TextBlock>
+            Foreground="#FF575757" HorizontalAlignment="Right" Width="176" Text="Super Notification ^^&quot;"/>
         <Button
             Click="OnButtonClick"
             ToolTip="{Binding Path=ToolTipText}"
@@ -95,13 +107,7 @@
         </Button>
         <TextBlock
             Margin="19,87,10,44"
-            TextWrapping="Wrap">
-            <Run Text="This user control makes use of the " Language="de-ch" />
-            <Run FontStyle="Italic" FontWeight="Bold" Text="PopupOpened " Language="de-ch" />
-            <Run
-                Text="attached routed event . Whenever the popup is opened, this attached event fires and triggers the rotation animation."
-                Language="de-ch" />
-        </TextBlock>
+            TextWrapping="Wrap"><Run Text="This is my sample notification balloon!!!"/><LineBreak/><Run/><LineBreak/><Run Text="TungQD"/></TextBlock>
         <TextBlock Margin="0,36,20,0" VerticalAlignment="Top" Height="Auto" TextWrapping="Wrap" FontWeight="Bold"
                    FontSize="14" HorizontalAlignment="Right" Foreground="#FF575757">
             <Run Text="Clicks: " Language="de-ch" />
