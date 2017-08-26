@@ -1,0 +1,5 @@
+C:\Users\tquach1.USOL-V\Documents\Visual Studio 2015\Projects\wpf-notifyicon\wpf-notifyicon\NotifyIconWpf\bin\Debug\Hardcodet.Wpf.TaskbarNotification.dll
+C:\Users\tquach1.USOL-V\Documents\Visual Studio 2015\Projects\wpf-notifyicon\wpf-notifyicon\NotifyIconWpf\bin\Debug\Hardcodet.Wpf.TaskbarNotification.pdb
+C:\Users\tquach1.USOL-V\Documents\Visual Studio 2015\Projects\wpf-notifyicon\wpf-notifyicon\NotifyIconWpf\obj\Debug\NotifyIconWpf.csprojResolveAssemblyReference.cache
+C:\Users\tquach1.USOL-V\Documents\Visual Studio 2015\Projects\wpf-notifyicon\wpf-notifyicon\NotifyIconWpf\obj\Debug\Hardcodet.Wpf.TaskbarNotification.dll
+C:\Users\tquach1.USOL-V\Documents\Visual Studio 2015\Projects\wpf-notifyicon\wpf-notifyicon\NotifyIconWpf\obj\Debug\Hardcodet.Wpf.TaskbarNotification.pdb
